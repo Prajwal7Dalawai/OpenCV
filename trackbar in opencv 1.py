@@ -7,7 +7,7 @@ def nothing(x):
 cv2.createTrackbar('B','image',0,255,nothing)  # creation of trackbar arguments: name of trackbar, name of window, intial value, final value, callback function
 cv2.createTrackbar('G','image',0,255,nothing)
 cv2.createTrackbar('R','image',0,255,nothing)
-switch = '0: colour\n1: On'
+switch = '0: off\n1: On'
 cv2.createTrackbar('switch','image',0,1,nothing)
 while(1):
     cv2.imshow('image',img)
