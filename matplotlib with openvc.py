@@ -20,7 +20,7 @@ plt.show()
 '''#cv2.imshow('image',img)
 img = cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
 plt.imshow(img)
-plt.xticks([]),plt.yticks([])
+plt.xticks([]),plt.yticks([])  removes x and y values in image
 plt.show()
 cv2.waitKey(0)
 cv2.destroyAllWindows()#'''
