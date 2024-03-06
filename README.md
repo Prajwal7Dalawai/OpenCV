@@ -1,4 +1,3 @@
-# OpenCV
 OpenCV is the Python library used for object detection. It can be used to detect image, perform some operations of the image, etc.
 <br><br><br>
 This repository contains all the basic codes required to learn OpenCv python library<br>
