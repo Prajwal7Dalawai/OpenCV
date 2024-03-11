@@ -1,0 +1,10 @@
+Hough Transform:
+Hough transform is a popular technique to detect any shape, if you can represent that shape in a mathematical form.
+It can detect the shape even if it is broken or distorted a little bit.
+
+Hough transform algorithm involves four steps:
+1. Edge detection using canny edge detctor
+2. Mapping the edge points to the Hough space and storage in accumulator.
+3.Interpretation of the accumulator to yield lines of infinite length. The Interpretation is done by thresholding and 
+  other possible constraints
+4.Conversion of infinite lines to finite lines.
