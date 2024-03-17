@@ -7,7 +7,7 @@ cap = cv2.VideoCapture('data/traffic.webm')
 ret, frame = cap.read()
 
 #2.Set up the initial location of window.
-x,y,width,hieght = 500,10,160,180
+x,y,width,hieght = 300,200,100,50
 track_window = (x,y,width,hieght)
 
 #3.Set up the ROI of tracking
@@ -25,7 +25,8 @@ while(1):
             hsv= cv2.cvtColor(frame,cv2.COLOR_BGR2HSV)
             dst = cv2.calcBackProject([hsv],[0],roi_hist,[0,180],1)
             #apply meanshift to get new position
-            ret,track_window = cv2.meanShift(dst,track_window,term_crit)
+            #ret,track_window = cv2.meanShift(dst,track_window,term_crit)
+            ret,track_window = cv2.CamShift(dst,track_window,term_crit)
             #draw it on a image
             x,y,w,h = track_window
             final_image = cv2.rectangle(frame,(x,y),(x+w,y+h),255,3)
